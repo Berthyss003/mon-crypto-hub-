@@ -2,23 +2,21 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <!-- Meta Tags pour le partage sur les réseaux -->
-<meta property="og:title" content="Crypto-Task Hub | Agence IA & Web3">
-<meta property="og:description" content="Développeur Web3 & Expert IA. Je crée vos sites et outils automatisés. Contactez-moi pour propulser votre projet.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600">
-<meta property="og:url" content="https://berthyss003.github.io/mon-crypto-hub-/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Tags pour le partage sur les réseaux -->
+    <meta property="og:title" content="Crypto-Task Hub | Agence IA & Web3">
+    <meta property="og:description" content="Développeur Web3 & Expert IA. Je crée vos sites et outils automatisés. Contactez-moi pour propulser votre projet.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600">
+    <meta property="og:url" content="https://berthyss003.github.io/mon-crypto-hub-/">
+    
     <title>Crypto-Task & Service Hub</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
-        body {
-            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-        }
+        body { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); }
     </style>
 </head>
 <body class="text-slate-100 font-sans min-h-screen pb-12">
 
-    <!-- En-tête / Header -->
     <header class="p-5 border-b border-indigo-900/50 bg-slate-900/60 backdrop-blur-md sticky top-0 z-50 flex justify-between items-center">
         <div class="flex items-center gap-2 cursor-pointer" onclick="showSection('home')">
             <span class="text-2xl">⚡</span>
@@ -32,8 +30,6 @@
     </header>
 
     <main class="max-w-md mx-auto px-4 mt-6 space-y-6">
-        
-        <!-- ================= SECTION ACCUEIL ================= -->
         <div id="section-home" class="space-y-6">
             <section class="text-center py-4 space-y-2">
                 <h2 class="text-2xl font-bold text-white">Monétisez votre écosystème</h2>
@@ -41,166 +37,87 @@
             </section>
 
             <section class="space-y-4">
-                <!-- Carte 1: Micro-SaaS -->
                 <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 shadow-xl">
                     <div class="flex items-start justify-between">
                         <div class="bg-amber-500/10 p-3 rounded-xl text-amber-400 text-xl">🛠️</div>
                         <span class="bg-amber-500/20 text-amber-300 text-[10px] uppercase font-bold px-2 py-0.5 rounded">Outils SaaS</span>
                     </div>
                     <h3 class="text-lg font-bold mt-3 text-white">Micro-Outils Automatiques</h3>
-                    <p class="text-xs text-slate-400 mt-1">Générateurs de scripts IA, analyses et outils automatiques en libre-service.</p>
                     <button onclick="showSection('saas')" class="w-full mt-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium text-xs py-2.5 rounded-xl shadow-lg active:scale-95 transition cursor-pointer">
-                        Ouvrir la boîte à outils (Gratuit)
+                        Ouvrir la boîte à outils
                     </button>
                 </div>
 
-                <!-- Carte 2: Freelance Agency -->
                 <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 shadow-xl">
                     <div class="flex items-start justify-between">
                         <div class="bg-pink-500/10 p-3 rounded-xl text-pink-400 text-xl">💼</div>
                         <span class="bg-pink-500/20 text-pink-300 text-[10px] uppercase font-bold px-2 py-0.5 rounded">Freelance</span>
                     </div>
                     <h3 class="text-lg font-bold mt-3 text-white">Commandes Web sur-mesure</h3>
-                    <p class="text-xs text-slate-400 mt-1">Votre espace client pour soumettre des projets de sites ou d'applications créés par IA.</p>
                     <button onclick="showSection('freelance')" class="w-full mt-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium text-xs py-2.5 rounded-xl shadow-lg active:scale-95 transition cursor-pointer">
-                        Passer une commande de projet
+                        Passer une commande
                     </button>
                 </div>
 
-                <!-- Carte 3: Écosystème Crypto -->
                 <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 shadow-xl">
                     <div class="flex items-start justify-between">
                         <div class="bg-indigo-500/10 p-3 rounded-xl text-indigo-400 text-xl">🌐</div>
                         <span class="bg-indigo-500/20 text-indigo-300 text-[10px] uppercase font-bold px-2 py-0.5 rounded">Web3</span>
                     </div>
                     <h3 class="text-lg font-bold mt-3 text-white">Espace Crypto & Parrainage</h3>
-                    <p class="text-xs text-slate-400 mt-1">Simulez et suivez vos gains d'équipe, optimisez votre parrainage crypto mobile.</p>
                     <button onclick="showSection('crypto')" class="w-full mt-4 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-medium text-xs py-2.5 rounded-xl shadow-lg active:scale-95 transition cursor-pointer">
-                        Accéder au Hub Crypto
+                        Accéder au Hub
                     </button>
                 </div>
             </section>
         </div>
 
-        <!-- ================= SECTION INTERACTIVE : SAAS ================= -->
         <div id="section-saas" class="hidden space-y-4">
-            <button onclick="showSection('home')" class="text-xs text-indigo-400 flex items-center gap-1 mb-2">← Retour à l'accueil</button>
-            <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl space-y-4">
-                <h3 class="text-xl font-bold text-amber-400">🛠️ Générateur de Contenu IA</h3>
-                <p class="text-xs text-slate-400">Générez instantanément des citations inspirantes ou des publications pour vos réseaux.</p>
-                <div>
-                    <label class="text-xs text-slate-300 block mb-1">Thématique :</label>
-                    <input id="saas-topic" type="text" placeholder="Ex: Motivation, Succès, Blockchain" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-amber-500">
-                </div>
-                <button onclick="runSaaS()" class="w-full bg-amber-500 text-slate-950 font-bold text-xs py-2.5 rounded-xl transition cursor-pointer">
-                    Générer la publication (-0.50 $)
-                </button>
-                <div id="saas-result" class="hidden bg-slate-950 p-3 rounded-xl border border-slate-800 text-xs font-mono text-slate-300 whitespace-pre-line"></div>
+            <button onclick="showSection('home')" class="text-xs text-indigo-400">← Retour</button>
+            <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl">
+                <h3 class="text-xl font-bold text-amber-400">🛠️ Générateur IA</h3>
+                <button onclick="runSaaS()" class="w-full mt-4 bg-amber-500 text-slate-950 font-bold text-xs py-2.5 rounded-xl">Générer (-0.50 $)</button>
+                <div id="saas-result" class="hidden mt-4 bg-slate-950 p-3 rounded-xl border border-slate-800 text-xs text-slate-300"></div>
             </div>
         </div>
 
-        <!-- ================= SECTION INTERACTIVE : FREELANCE ================= -->
         <div id="section-freelance" class="hidden space-y-4">
-            <button onclick="showSection('home')" class="text-xs text-indigo-400 flex items-center gap-1 mb-2">← Retour à l'accueil</button>
-            <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl space-y-4">
-                <h3 class="text-xl font-bold text-pink-400">💼 Déposer un Projet Client</h3>
-                <p class="text-xs text-slate-400">Formulaire automatique de commande pour les clients de votre agence.</p>
-                <div class="space-y-3">
-                    <div>
-                        <label class="text-xs text-slate-300 block mb-1">Type de projet :</label>
-                        <select id="project-type" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-sm text-slate-300">
-                            <option>Site Web Vitrine (250 $)</option>
-                            <option>Application Mobile Simple (500 $)</option>
-                            <option>Plateforme Web Complète (1000 $)</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="text-xs text-slate-300 block mb-1">Description des besoins :</label>
-                        <textarea id="project-desc" rows="3" placeholder="Décrivez ce que l'application doit faire..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-pink-500"></textarea>
-                    </div>
-                    <button onclick="submitProject()" class="w-full bg-pink-500 text-white font-bold text-xs py-2.5 rounded-xl transition cursor-pointer">
-                        Valider et encaisser l'acompte
-                    </button>
-                </div>
+            <button onclick="showSection('home')" class="text-xs text-indigo-400">← Retour</button>
+            <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl">
+                <h3 class="text-xl font-bold text-pink-400">💼 Déposer un Projet</h3>
+                <button onclick="submitProject()" class="w-full mt-4 bg-pink-500 text-white font-bold text-xs py-2.5 rounded-xl">Valider la commande</button>
             </div>
         </div>
 
-        <!-- ================= SECTION INTERACTIVE : CRYPTO ================= -->
         <div id="section-crypto" class="hidden space-y-4">
-            <button onclick="showSection('home')" class="text-xs text-indigo-400 flex items-center gap-1 mb-2">← Retour à l'accueil</button>
-            <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl space-y-4">
-                <h3 class="text-xl font-bold text-indigo-400">🌐 Simulateur d'Équipe Web3</h3>
-                <p class="text-xs text-slate-400">Calculez vos revenus potentiels basés sur la taille de votre réseau de parrainage mobile.</p>
-                <div>
-                    <label class="text-xs text-slate-300 block mb-1">Nombre de filleuls actifs :</label>
-                    <input id="crypto-referrals" type="number" value="5" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
-                </div>
-                <button onclick="calculateCrypto()" class="w-full bg-indigo-500 text-white font-bold text-xs py-2.5 rounded-xl transition cursor-pointer">
-                    Calculer le taux horaire de minage
-                </button>
-                <div id="crypto-result" class="hidden bg-slate-950 p-4 rounded-xl border border-slate-800 text-center space-y-1">
-                    <p class="text-xs text-slate-400">Vitesse estimée du réseau :</p>
-                    <p id="crypto-speed" class="text-lg font-bold text-emerald-400"></p>
-                </div>
+            <button onclick="showSection('home')" class="text-xs text-indigo-400">← Retour</button>
+            <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl">
+                <h3 class="text-xl font-bold text-indigo-400">🌐 Hub Crypto</h3>
+                <button onclick="calculateCrypto()" class="w-full mt-4 bg-indigo-500 text-white font-bold text-xs py-2.5 rounded-xl">Calculer le minage</button>
+                <div id="crypto-result" class="hidden mt-4 bg-slate-950 p-4 rounded-xl border text-center text-emerald-400 font-bold"></div>
             </div>
         </div>
-
-        <!-- Bas de page -->
-        <footer class="bg-indigo-950/30 border border-indigo-900/60 rounded-xl p-4 text-center">
-            <p class="text-[11px] text-indigo-300 font-mono">⚡ Prêt à être connecté à vos idées.</p>
-        </footer>
-
     </main>
 
-    <!-- Script Logique d'interaction -->
     <script>
         let balance = 15.00;
-
-        function showSection(sectionId) {
-            document.getElementById('section-home').classList.add('hidden');
-            document.getElementById('section-saas').classList.add('hidden');
-            document.getElementById('section-freelance').classList.add('hidden');
-            document.getElementById('section-crypto').classList.add('hidden');
-            
-            document.getElementById('section-' + sectionId).classList.remove('hidden');
-            window.scrollTo(0,0);
+        function showSection(s) {
+            document.getElementById('section-home').classList.toggle('hidden', s !== 'home');
+            document.getElementById('section-saas').classList.toggle('hidden', s !== 'saas');
+            document.getElementById('section-freelance').classList.toggle('hidden', s !== 'freelance');
+            document.getElementById('section-crypto').classList.toggle('hidden', s !== 'crypto');
         }
-
         function runSaaS() {
-            const topic = document.getElementById('saas-topic').value || 'Motivation';
-            if (balance < 0.50) {
-                alert("Fonds insuffisants !");
-                return;
-            }
             balance -= 0.50;
             document.getElementById('user-balance').innerText = balance.toFixed(2) + " $";
-            
-            const resultBox = document.getElementById('saas-result');
-            resultBox.classList.remove('hidden');
-            resultBox.innerText = `[IA MANUS GENERATOR] 🤖\n\nPublication générée sur le thème "${topic}" :\n\n"Le succès n'est pas le résultat d'un coup de chance, c'est la répétition de petits efforts quotidiens. Ne vous arrêtez pas quand vous êtes fatigué, arrêtez-vous quand vous avez réussi. 🚀💎 #Motivation #Objectifs"`;
+            document.getElementById('saas-result').classList.remove('hidden');
+            document.getElementById('saas-result').innerText = "IA générée : Succès garanti !";
         }
-
-        function submitProject() {
-            const type = document.getElementById('project-type').value;
-            const desc = document.getElementById('project-desc').value;
-            if(!desc) {
-                alert("Veuillez décrire brièvement le projet.");
-                return;
-            }
-            alert(`Succès ! Commande enregistrée pour un : ${type}.\nL'IA commence la génération des fichiers en arrière-plan.`);
-            document.getElementById('project-desc').value = "";
-            showSection('home');
-        }
-
+        function submitProject() { alert("Commande envoyée !"); showSection('home'); }
         function calculateCrypto() {
-            const refs = parseInt(document.getElementById('crypto-referrals').value) || 0;
-            const baseSpeed = 0.25;
-            const totalSpeed = baseSpeed + (refs * 0.05);
-            
             document.getElementById('crypto-result').classList.remove('hidden');
-            document.getElementById('crypto-speed').innerText = totalSpeed.toFixed(2) + " Bee / heure";
+            document.getElementById('crypto-result').innerText = "0.35 Bee / heure";
         }
     </script>
 </body>
 </html>
-
