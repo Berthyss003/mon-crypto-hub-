@@ -25,10 +25,10 @@
         }
 
         .container {
-            max-width: 500px;
+            max-width: 550px;
             width: 100%;
             background: rgba(30, 41, 59, 0.7);
-            padding: 40px 30px;
+            padding: 40px 25px;
             border-radius: 24px;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(251, 191, 36, 0.2); /* Bordure légère dorée */
@@ -40,7 +40,7 @@
             font-size: 2.2rem;
             font-weight: 800;
             margin-bottom: 10px;
-            background: linear-gradient(135deg, #fbbf24, #ec4899); /* Dégradé Or/Ambre vers Rose Néon */
+            background: linear-gradient(135deg, #fbbf24, #ec4899); /* Dégradé Or vers Rose Néon */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -52,12 +52,49 @@
             line-height: 1.5;
         }
 
-        /* Zone de commande */
+        /* GRILLE DES 3 OPTIONS / SERVICES */
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .option-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 18px;
+            border-radius: 14px;
+            text-align: left;
+            transition: transform 0.2s;
+        }
+
+        .option-card:hover {
+            transform: scale(1.02);
+            border-color: rgba(236, 72, 153, 0.3);
+        }
+
+        .option-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fbbf24;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .option-desc {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            line-height: 1.4;
+        }
+
+        /* Zone de commande finale */
         .order-section {
             background: #1e293b;
             padding: 20px;
             border-radius: 16px;
-            margin-bottom: 30px;
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
@@ -67,7 +104,7 @@
             font-weight: 500;
         }
 
-        /* Bouton WhatsApp Dynamique */
+        /* Bouton WhatsApp Unique */
         .btn-whatsapp {
             display: inline-flex;
             align-items: center;
@@ -91,30 +128,40 @@
             background-color: #20ba56;
         }
 
-        .btn-whatsapp:active {
-            transform: translateY(-1px);
-        }
-
         /* Pied de page */
         .footer {
             font-size: 0.85rem;
             color: #64748b;
-            margin-top: 20px;
+            margin-top: 25px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Titre principal de ton Hub -->
         <h1 class="title">Crypto-Task Hub</h1>
-        <p class="subtitle">Création d'outils automatisés, solutions Web sur-mesure & écosystème Web3.</p>
+        <p class="subtitle">Votre passerelle vers les services de développement automatisés et l'écosystème Web3.</p>
 
-        <!-- Section Action -->
+        <div class="options-container">
+            <div class="option-card">
+                <div class="option-title">🤖 Outils Automatisés</div>
+                <div class="option-desc">Déploiement de scripts, bots intelligents et automatisations de tâches pour booster votre productivité au quotidien.</div>
+            </div>
+
+            <div class="option-card">
+                <div class="option-title">💻 Solutions Web Sur-Mesure</div>
+                <div class="option-desc">Création et design de plateformes modernes, d'applications web fluides et d'interfaces adaptées à vos besoins professionnels.</div>
+            </div>
+
+            <div class="option-card">
+                <div class="option-title">🌐 Intégration Web3 & Crypto</div>
+                <div class="option-desc">Conseil, développement et connexion d'outils liés aux applications décentralisées et aux réseaux de l'écosystème crypto.</div>
+            </div>
+        </div>
+
         <div class="order-section">
-            <p class="order-text">Prêt à lancer votre projet ?</p>
+            <p class="order-text">Discutons de votre projet immédiatement :</p>
             
-            <!-- LIEN WHATSAPP UNIVERSEL ET CORRIGÉ -->
             <a href="https://wa.me/22364867074?text=Bonjour%20Crypto-Task%20Hub,%20je%20souhaite%20passer%20une%20commande." 
                target="_blank" 
                class="btn-whatsapp">
@@ -125,7 +172,6 @@
             </a>
         </div>
 
-        <!-- Mentions / Copyright -->
         <p class="footer">&copy; 2026 Crypto-Task Hub. Tous droits réservés.</p>
     </div>
 
