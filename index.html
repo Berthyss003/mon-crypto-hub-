@@ -61,7 +61,7 @@
             padding-left: 10px;
         }
 
-        /* GRILLE DES 3 OPTIONS / SERVICES */
+        /* GRILLE DES SERVICES */
         .options-container {
             display: flex;
             flex-direction: column;
@@ -99,44 +99,71 @@
             line-height: 1.4;
         }
 
-        /* SECTION PORTFOLIO / RÉALISATIONS */
+        /* SECTION NOS PRODUITS & APPLICATIONS */
         .portfolio-container {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 15px;
             margin-bottom: 30px;
         }
 
         .portfolio-card {
-            background: rgba(30, 41, 59, 0.4);
-            border: 1px solid rgba(251, 191, 36, 0.1);
-            padding: 15px;
-            border-radius: 12px;
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.6), rgba(15, 23, 42, 0.8));
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            padding: 20px;
+            border-radius: 16px;
             text-align: left;
+        }
+
+        .portfolio-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 8px;
         }
 
-        .portfolio-info h4 {
-            font-size: 1rem;
-            color: #f8fafc;
-            margin-bottom: 3px;
+        .portfolio-header h4 {
+            font-size: 1.1rem;
+            color: #fbbf24;
         }
 
-        .portfolio-info p {
-            font-size: 0.85rem;
+        .portfolio-card p {
+            font-size: 0.9rem;
             color: #94a3b8;
+            line-height: 1.4;
+            margin-bottom: 15px;
         }
 
         .badge-status {
-            background: rgba(37, 211, 102, 0.1);
-            color: #25D366;
+            background: rgba(251, 191, 36, 0.1);
+            color: #fbbf24;
             padding: 4px 10px;
             border-radius: 20px;
             font-size: 0.75rem;
             font-weight: bold;
-            border: 1px solid rgba(37, 211, 102, 0.2);
+            border: 1px solid rgba(251, 191, 36, 0.2);
+        }
+
+        /* Petit bouton discret pour visiter l'app */
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #f8fafc;
+            text-decoration: none;
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(251, 191, 36, 0.1);
+            border-color: #fbbf24;
+            color: #fbbf24;
         }
 
         /* Zone de commande finale */
@@ -188,11 +215,13 @@
 <body>
 
     <div class="container">
+        <!-- Titre principal de ton Hub -->
         <h1 class="title">Crypto-Task Hub</h1>
         <p class="subtitle">Votre passerelle vers les services de développement automatisés et l'écosystème Web3.</p>
 
         <div class="section-title">Nos Services</div>
 
+        <!-- LES TROIS OPTIONS PRINCIPALES -->
         <div class="options-container">
             <div class="option-card">
                 <div class="option-title">🤖 Outils Automatisés</div>
@@ -210,38 +239,30 @@
             </div>
         </div>
 
-        <div class="section-title">Projets Récents</div>
+        <!-- SECTION PRODUIT PHARES : LIEN VERS TON APPLI PI -->
+        <div class="section-title">Notre Application Vedette</div>
         <div class="portfolio-container">
             
             <div class="portfolio-card">
-                <div class="portfolio-info">
-                    <h4>Bot Multi-Crypto Alert</h4>
-                    <p>Système de tracking automatisé des prix en temps réel.</p>
+                <div class="portfolio-header">
+                    <h4>Berthyss003xchange</h4>
+                    <span class="badge-status">Testnet Actif</span>
                 </div>
-                <span class="badge-status">Déployé</span>
-            </div>
-
-            <div class="portfolio-card">
-                <div class="portfolio-info">
-                    <h4>PiXchange App Link</h4>
-                    <p>Interface vitrine fluide connectée aux API d'échange.</p>
-                </div>
-                <span class="badge-status">Déployé</span>
-            </div>
-
-            <div class="portfolio-card">
-                <div class="portfolio-info">
-                    <h4>TaskAuto Script v1.0</h4>
-                    <p>Automatisation de tâches répétitives pour canaux Telegram.</p>
-                </div>
-                <span class="badge-status">Déployé</span>
+                <p>Notre plateforme d'échange fluide et sécurisée intégrée à l'écosystème Pi Network. Découvrez notre savoir-faire en action.</p>
+                
+                <!-- NOTE : Remplace '#' par l'URL de ton application si tu veux qu'elle s'ouvre directement au clic -->
+                <a href="#" target="_blank" class="btn-secondary">
+                    Ouvrir l'application ↗
+                </a>
             </div>
 
         </div>
 
+        <!-- Section Action Finale -->
         <div class="order-section">
-            <p class="order-text">Discutons de votre projet immédiatement :</p>
+            <p class="order-text">Besoin d'un outil similaire ou d'un service sur-mesure ?</p>
             
+            <!-- LIEN WHATSAPP DIRECT -->
             <a href="https://wa.me/22364867074?text=Bonjour%20Crypto-Task%20Hub,%20je%20souhaite%20passer%20une%20commande." 
                target="_blank" 
                class="btn-whatsapp">
@@ -252,6 +273,7 @@
             </a>
         </div>
 
+        <!-- Mentions -->
         <p class="footer">&copy; 2026 Crypto-Task Hub. Tous droits réservés.</p>
     </div>
 
