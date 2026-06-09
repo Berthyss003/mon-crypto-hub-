@@ -52,12 +52,21 @@
             line-height: 1.5;
         }
 
+        .section-title {
+            font-size: 1.3rem;
+            color: #f8fafc;
+            margin: 25px 0 15px 0;
+            text-align: left;
+            border-left: 4px solid #ec4899;
+            padding-left: 10px;
+        }
+
         /* GRILLE DES 3 OPTIONS / SERVICES */
         .options-container {
             display: flex;
             flex-direction: column;
             gap: 15px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .option-card {
@@ -88,6 +97,46 @@
             font-size: 0.9rem;
             color: #94a3b8;
             line-height: 1.4;
+        }
+
+        /* SECTION PORTFOLIO / RÉALISATIONS */
+        .portfolio-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .portfolio-card {
+            background: rgba(30, 41, 59, 0.4);
+            border: 1px solid rgba(251, 191, 36, 0.1);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .portfolio-info h4 {
+            font-size: 1rem;
+            color: #f8fafc;
+            margin-bottom: 3px;
+        }
+
+        .portfolio-info p {
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        .badge-status {
+            background: rgba(37, 211, 102, 0.1);
+            color: #25D366;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border: 1px solid rgba(37, 211, 102, 0.2);
         }
 
         /* Zone de commande finale */
@@ -142,6 +191,8 @@
         <h1 class="title">Crypto-Task Hub</h1>
         <p class="subtitle">Votre passerelle vers les services de développement automatisés et l'écosystème Web3.</p>
 
+        <div class="section-title">Nos Services</div>
+
         <div class="options-container">
             <div class="option-card">
                 <div class="option-title">🤖 Outils Automatisés</div>
@@ -157,6 +208,35 @@
                 <div class="option-title">🌐 Intégration Web3 & Crypto</div>
                 <div class="option-desc">Conseil, développement et connexion d'outils liés aux applications décentralisées et aux réseaux de l'écosystème crypto.</div>
             </div>
+        </div>
+
+        <div class="section-title">Projets Récents</div>
+        <div class="portfolio-container">
+            
+            <div class="portfolio-card">
+                <div class="portfolio-info">
+                    <h4>Bot Multi-Crypto Alert</h4>
+                    <p>Système de tracking automatisé des prix en temps réel.</p>
+                </div>
+                <span class="badge-status">Déployé</span>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-info">
+                    <h4>PiXchange App Link</h4>
+                    <p>Interface vitrine fluide connectée aux API d'échange.</p>
+                </div>
+                <span class="badge-status">Déployé</span>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-info">
+                    <h4>TaskAuto Script v1.0</h4>
+                    <p>Automatisation de tâches répétitives pour canaux Telegram.</p>
+                </div>
+                <span class="badge-status">Déployé</span>
+            </div>
+
         </div>
 
         <div class="order-section">
