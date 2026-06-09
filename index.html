@@ -3,118 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Meta Tags pour le partage sur les réseaux -->
-    <meta property="og:title" content="Crypto-Task Hub | Agence IA & Web3">
-    <meta property="og:description" content="Développeur Web3 & Expert IA. Je crée vos sites et outils automatisés. Contactez-moi pour propulser votre projet.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600">
-    <meta property="og:url" content="https://berthyss003.github.io/mon-crypto-hub-/">
-    
-    <title>Crypto-Task & Service Hub</title>
-    <!-- Importation Tailwind CSS version 4 -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Crypto-Task Hub | IA & Web3 Solutions</title>
     <style>
-        body { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); }
+        /* Styles Globaux - Thème Sombre Futuriste */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Montserrat', sans-serif;
+            background-color: #0f172a; /* Fond bleu nuit */
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background: rgba(30, 41, 59, 0.7);
+            padding: 40px 30px;
+            border-radius: 24px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(251, 191, 36, 0.2); /* Bordure légère dorée */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* En-tête */
+        .title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #fbbf24, #ec4899); /* Dégradé Or/Ambre vers Rose Néon */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #94a3b8;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        /* Zone de commande */
+        .order-section {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .order-text {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        /* Bouton WhatsApp Dynamique */
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #25D366; /* Vert WhatsApp */
+            color: #ffffff;
+            text-decoration: none;
+            padding: 16px 32px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+            width: 100%;
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px rgba(37, 211, 102, 0.5);
+            background-color: #20ba56;
+        }
+
+        .btn-whatsapp:active {
+            transform: translateY(-1px);
+        }
+
+        /* Pied de page */
+        .footer {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-top: 20px;
+        }
     </style>
 </head>
-<body class="text-slate-100 font-sans min-h-screen flex flex-col">
+<body>
 
-    <!-- HEADER : Structure robuste -->
-    <header class="p-5 border-b border-indigo-900/50 bg-slate-900/60 backdrop-blur-md sticky top-0 z-50 flex justify-between items-center">
-        <div class="flex items-center gap-2 cursor-pointer" onclick="showSection('home')">
-            <span class="text-2xl">⚡</span>
-            <h1 class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-amber-400 via-pink-500 to-indigo-400 bg-clip-text text-transparent">
-                Crypto-Task Hub
-            </h1>
-        </div>
-        <div class="bg-indigo-950/80 border border-indigo-500/30 px-3 py-1 rounded-full text-xs text-indigo-300 font-mono">
-            Solde : <span id="user-balance" class="text-amber-400 font-bold">15.00 $</span>
-        </div>
-    </header>
+    <div class="container">
+        <!-- Titre principal de ton Hub -->
+        <h1 class="title">Crypto-Task Hub</h1>
+        <p class="subtitle">Création d'outils automatisés, solutions Web sur-mesure & écosystème Web3.</p>
 
-    <!-- MAIN : Structure évolutive -->
-    <main class="max-w-md mx-auto px-4 mt-6 space-y-6 flex-grow">
-        
-        <!-- SECTION ACCUEIL -->
-        <div id="section-home" class="space-y-6">
-            <section class="text-center py-4 space-y-2">
-                <h2 class="text-2xl font-bold text-white">Monétisez votre écosystème</h2>
-                <p class="text-sm text-slate-400">Une seule plateforme, trois leviers puissants pour générer des revenus.</p>
-            </section>
-
-            <section class="space-y-4">
-                <!-- CARTE 1 -->
-                <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 shadow-xl transition-transform hover:scale-[1.02]">
-                    <div class="flex items-start justify-between">
-                        <div class="bg-amber-500/10 p-3 rounded-xl text-amber-400 text-xl">🛠️</div>
-                        <span class="bg-amber-500/20 text-amber-300 text-[10px] uppercase font-bold px-2 py-0.5 rounded">Outils SaaS</span>
-                    </div>
-                    <h3 class="text-lg font-bold mt-3 text-white">Micro-Outils Automatiques</h3>
-                    <button onclick="showSection('saas')" class="w-full mt-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium text-xs py-2.5 rounded-xl shadow-lg">
-                        Ouvrir la boîte à outils
-                    </button>
-                </div>
-
-                <!-- CARTE 2 -->
-                <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 shadow-xl transition-transform hover:scale-[1.02]">
-                    <div class="flex items-start justify-between">
-                        <div class="bg-pink-500/10 p-3 rounded-xl text-pink-400 text-xl">💼</div>
-                        <span class="bg-pink-500/20 text-pink-300 text-[10px] uppercase font-bold px-2 py-0.5 rounded">Freelance</span>
-                    </div>
-                    <h3 class="text-lg font-bold mt-3 text-white">Commandes Web sur-mesure</h3>
-                    <button onclick="showSection('freelance')" class="w-full mt-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium text-xs py-2.5 rounded-xl shadow-lg">
-                        Passer une commande
-                    </button>
-                </div>
-
-                <!-- CARTE 3 -->
-                <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 shadow-xl transition-transform hover:scale-[1.02]">
-                    <div class="flex items-start justify-between">
-                        <div class="bg-indigo-500/10 p-3 rounded-xl text-indigo-400 text-xl">🌐</div>
-                        <span class="bg-indigo-500/20 text-indigo-300 text-[10px] uppercase font-bold px-2 py-0.5 rounded">Web3</span>
-                    </div>
-                    <h3 class="text-lg font-bold mt-3 text-white">Espace Crypto & Parrainage</h3>
-                    <button onclick="showSection('crypto')" class="w-full mt-4 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-medium text-xs py-2.5 rounded-xl shadow-lg">
-                        Accéder au Hub
-                    </button>
-                </div>
-            </section>
-
-            <!-- PREUVES SOCIALES -->
-            <section class="grid grid-cols-2 gap-4 mt-8">
-                <div class="bg-slate-900/50 border border-slate-800 p-4 rounded-2xl text-center">
-                    <div class="text-2xl font-bold text-amber-400">12+</div>
-                    <div class="text-[10px] text-slate-500 uppercase tracking-widest">Projets livrés</div>
-                </div>
-                <div class="bg-slate-900/50 border border-slate-800 p-4 rounded-2xl text-center">
-                    <div class="text-2xl font-bold text-pink-400">98%</div>
-                    <div class="text-[10px] text-slate-500 uppercase tracking-widest">Satisfaction</div>
-                </div>
-            </section>
+        <!-- Section Action -->
+        <div class="order-section">
+            <p class="order-text">Prêt à lancer votre projet ?</p>
+            
+            <!-- LIEN WHATSAPP UNIVERSEL ET CORRIGÉ -->
+            <a href="https://wa.me/22364867074?text=Bonjour%20Crypto-Task%20Hub,%20je%20souhaite%20passer%20une%20commande." 
+               target="_blank" 
+               class="btn-whatsapp">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.863-9.855.001-2.633-1.022-5.101-2.877-6.958C16.602 1.975 14.132.953 11.5.953c-5.443 0-9.865 4.422-9.867 9.856-.001 1.702.443 3.361 1.284 4.815L1.817 22.17l4.83-1.266zM17.521 14.32c-.307-.154-1.82-.9-2.105-.998-.284-.1-.49-.154-.695.154-.206.31-.796.996-.975 1.2-.18.205-.359.23-.666.077-.307-.155-1.299-.48-2.474-1.526-.915-.817-1.534-1.826-1.714-2.133-.18-.307-.019-.473.135-.627.14-.139.307-.359.461-.54.154-.18.205-.307.307-.513.102-.205.051-.385-.026-.54-.077-.154-.695-1.677-.952-2.291-.25-.602-.503-.519-.695-.53-.18-.01-.385-.012-.59-.012-.205 0-.538.077-.82.385-.282.31-1.077 1.051-1.077 2.564 0 1.513 1.102 2.974 1.256 3.179.154.205 2.167 3.31 5.248 4.64.733.317 1.307.507 1.753.649.736.233 1.407.2 1.937.12.59-.089 1.819-.743 2.076-1.46.256-.717.256-1.333.18-1.46-.078-.127-.283-.205-.59-.36z"/>
+                </svg>
+                Passer commande sur WhatsApp
+            </a>
         </div>
 
-        <!-- ZONE DYNAMIQUE (Utilisateurs et développeurs peuvent ajouter des sections ici) -->
-        <div id="section-saas" class="hidden space-y-4"> ... </div>
-        <div id="section-freelance" class="hidden space-y-4"> ... </div>
-        <div id="section-crypto" class="hidden space-y-4"> ... </div>
-    </main>
+        <!-- Mentions / Copyright -->
+        <p class="footer">&copy; 2026 Crypto-Task Hub. Tous droits réservés.</p>
+    </div>
 
-    <!-- FOOTER : Signature de marque -->
-    <footer class="w-full text-center py-8 text-xs text-slate-500 mt-12 border-t border-indigo-950/40">
-        <p>Propulsé par <span class="text-indigo-400 font-semibold">BERTHYSS</span> | © 2026</p>
-    </footer>
-
-    <!-- SCRIPT LOGIQUE : Централизация -->
-    <script>
-        function showSection(s) {
-            // Logique de navigation simplifiée pour ajouter facilement des sections plus tard
-            ['home', 'saas', 'freelance', 'crypto'].forEach(id => {
-                document.getElementById('section-' + id).classList.toggle('hidden', s !== id);
-            });
-        }
-        function submitProject() {
-            const monNumero = "22364867074"; 
-            window.open(`https://wa.me/${monNumero}?text=${encodeURIComponent("Salut BERTHYSS ! Je veux commander un projet.")}`, '_blank');
-        }
-    </script>
 </body>
 </html>
